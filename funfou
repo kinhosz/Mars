@@ -1,0 +1,10 @@
+ENTREI NESSE SITE: https://www.glfw.org/download
+baixei a versao de 32-bit e usei a lib-mingw-w64. Qual explicação? nao sei
+talvez meu minGW seja 32 bit ou meu pc seja 32. o glfw3.dll tem que ficar na mesma pasta do test.exe
+
+para rodar o vulkan eu baixei, peguei a pasta de include e coloquei no mesmo projeto, assim como o lib32 (mas dependendo do seu mingw, poderia ser so lib) e rodei os comandos:
+
+g++ -c -o vulkanteste.o vulkanteste.c -Iinclude
+g++ -o vulkanteste.exe vulkanteste.o -Llib32 -lvulkan-1
+
+e deu bom demais
